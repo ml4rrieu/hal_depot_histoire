@@ -22,7 +22,7 @@
 
 <br /><br />
 
-**Quelle augmentation des dépôts en texte intégral pour le Casuhalathon 2021**
+**Quelle augmentation des dépôts en texte intégral pour le Casuhalathon 2021 ?**
 
 ~ 31 % 
 
@@ -50,6 +50,6 @@ Voir le notebook jupyter `calclul_augmentation.ipynb`
 
 <br /><br />
 
-**extra**
+**Annexe**
 
-sur le versement de prodinra voir [archive blog CCSD 2020/03/de-prodinra-au-portail-hal-inrae](https://web.archive.org/web/20210905195211/https://www.ccsd.cnrs.fr/2020/03/de-prodinra-au-portail-hal-inrae/) et [archive  blog CCSD 2020/05/bientot-323-000-nouveaux-depots-dans-hal](https://web.archive.org/web/20210905195309/https://www.ccsd.cnrs.fr/2020/05/bientot-323-000-nouveaux-depots-dans-hal/)
+Sur le versement de prodinra voir [archive blog CCSD 2020/03/de-prodinra-au-portail-hal-inrae](https://web.archive.org/web/20210905195211/https://www.ccsd.cnrs.fr/2020/03/de-prodinra-au-portail-hal-inrae/) et [archive  blog CCSD 2020/05/bientot-323-000-nouveaux-depots-dans-hal](https://web.archive.org/web/20210905195309/https://www.ccsd.cnrs.fr/2020/05/bientot-323-000-nouveaux-depots-dans-hal/)
