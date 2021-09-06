@@ -12,7 +12,7 @@
 
 2018 mars : versement des thèses de Univ. Lorraine
 
-2018 mai : mise en place de Droit2Hal [archive univ-droit.fr/](https://web.archive.org/web/20210905201740/https://univ-droit.fr/projets/33312-droit2hal)
+2018 mai : mise en place de Droit2Hal [univ-droit.fr _archive_](https://web.archive.org/web/20210905201740/https://univ-droit.fr/projets/33312-droit2hal)
 
 2019 fev. : versement des rapports HCERES 
 
@@ -29,9 +29,7 @@
 
 ~ 31 % 
 
-Sur l'année 2021 on observe actuellement (sept. 2021) une augmentation moyenne des dépôts avec fichier de 15 % par rapport à l'année précédente.
-
-Pour le Casuhalathon 2021 (24 mai - 11 juin) on observe, comparé à la même période l'année précédente -- après avoir retiré les versements de prodinra -- une augmentation de 46 %
+Sur l'année 2021 on observe, en sept. 2021, une augmentation moyenne des dépôts avec fichier de 15 % par rapport à l'année précédente. Pour le Casuhalathon 2021 (24 mai - 11 juin) on observe, comparé à la même période sur l'année précédente -- après avoir retiré les versements de Prodinra -- une augmentation de 46 %.
 
 
 <br /><br />
@@ -55,4 +53,4 @@ Voir le notebook jupyter `calclul_augmentation.ipynb`
 
 **Annexe**
 
-Sur le versement de prodinra voir [archive blog CCSD 2020/03/de-prodinra-au-portail-hal-inrae](https://web.archive.org/web/20210905195211/https://www.ccsd.cnrs.fr/2020/03/de-prodinra-au-portail-hal-inrae/) et [archive  blog CCSD 2020/05/bientot-323-000-nouveaux-depots-dans-hal](https://web.archive.org/web/20210905195309/https://www.ccsd.cnrs.fr/2020/05/bientot-323-000-nouveaux-depots-dans-hal/)
+Sur le versement de prodinra voir [blog CCSD 2020-03 _archive_](https://web.archive.org/web/20210905195211/https://www.ccsd.cnrs.fr/2020/03/de-prodinra-au-portail-hal-inrae/) et [blog CCSD 2020-05 _archive_](https://web.archive.org/web/20210905195309/https://www.ccsd.cnrs.fr/2020/05/bientot-323-000-nouveaux-depots-dans-hal/)
