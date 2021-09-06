@@ -1,4 +1,9 @@
-# :birthday: Joyeux anniversaire HAL :cake:
+<p align="center">
+
+    # :birthday: Joyeux anniversaire HAL :cake:
+
+
+</p>
 
 ![evol des dépôts depuis 2001](graph_all_years/hal_depot_all_years.png)
 
