@@ -1,7 +1,6 @@
 <p align="center">
 
-    # :birthday: Joyeux anniversaire HAL :cake:
-
+# :birthday: Joyeux anniversaire HAL :cake:
 
 </p>
 
