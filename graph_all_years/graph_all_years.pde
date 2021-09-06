@@ -1,18 +1,22 @@
 ArrayList<Month> months = new ArrayList<Month>();
 
+PFont font;
 String[] monthname = {"janv", "fév", "mars", "avril", "mai", "juin", "juillet", "août", "sept", "oct", "nov", "déc"};
 IntList values = new IntList();
 int maxRectSize, margin, txtLegendColor;
 
 void setup() {
-  size(800, 500);
+  size(1000, 700);
   background(250);
 
   Table data;
-  data = loadTable("evol_depot_cumule.csv", "header");
+  data = loadTable("depot_all_years.csv", "header");
   println("csv last row index", data.lastRowIndex());
 
   for (TableRow row : data.rows()) {
+    // POUR TRAITER UNE PARTIE DE L'ANNEE EN COURS
+    if (row.getString(0) == "2021-9") break;
+    
     String[] cut = row.getString(0).split("-");
 
     months.add(new Month(int(cut[0]), int(cut[1]), row.getInt(1), row.getInt(2)));
@@ -77,18 +81,21 @@ void setup() {
 
 void draw() {
   noLoop();
+  font = loadFont("NotoSans-Regular-24.vlw");
+  textFont(font);
   strokeCap(SQUARE);
   textAlign(CENTER);
   txtLegendColor = 100;
   color fileColor = color(#1f618d);
   color noticeColor = color(#f1c40f);
-  maxRectSize = 400;  
+  maxRectSize = 600;  
 
 
   addGlobalLegend(fileColor, noticeColor);
   addAxLegend(500000, "500k", width*0.3);
   addAxLegend(1000000, "1M", width*0.3);
   addAxLegend(2000000, "2M", width*0.3);
+  addAxLegend(2500000, "2.5M", width*0.3);
 
 
   strokeWeight(4);
@@ -96,7 +103,7 @@ void draw() {
   for ( int i = 0; i < months.size(); i++) {
     Month me = months.get(i);
 
-    //si premier mois de l'année ajouter l'année
+    //si premier mois de l'année ajouter l'année en légende
     if ( me.monthnb == 1) addYearLabel(str(me.year), me.x+ 10);    
 
 
@@ -109,43 +116,46 @@ void draw() {
     line(me.x, height-margin-calcy1, me.x, height-margin-calcy1-calcy2 );
 
     // ajouter le rapport file / notice+file
-    if ( me.monthnb == 12)addRapportLabel(me.rapport, me.x, height-margin-calcy1-calcy2);
+    if ( me.monthnb == 12) addRapportLabel(me.rapport, me.x, height-margin-calcy1-calcy2);
   }
   
-  save("hal_evol_depo.png");
+  save("hal_depot_all_years.png");
 }
 
 void addRapportLabel(String s, float x, float y ) {
-  textSize(10);
+  textSize(11);
   text(s, x-10, y-5);
 }
 void addGlobalLegend(color fileColor, color noticeColor) {
 
   float xlegend = margin;
-  float ylegend = height*0.35;
+  float ylegend = height*0.40;
   noStroke();
-  textSize(14);
+  textSize(15);
 
   fill(noticeColor);
   rect(xlegend, ylegend, 20, 20);
   fill(txtLegendColor);
-  text("dépôt sans texte intégral", xlegend + 110, ylegend+15);
+  text("dépôt sans texte intégral", xlegend + 120, ylegend+15);
 
   fill(fileColor);
   rect(xlegend, ylegend+25, 20, 20);
   fill(txtLegendColor);
-  text("dépôt avec texte intégral", xlegend + 110, ylegend+40);
+  text("dépôt avec texte intégral", xlegend + 120, ylegend+40);
+  
+  fill(txtLegendColor);
+  text("n %  taux annuel de texte intégral", xlegend + 122, ylegend+64);
 
-  textSize(20);
+  textSize(30);
   fill(0);
-  text("HAL : nombre de dépôts cumulés par années", width/2, margin);
+  text("Évolution des dépôts dans HAL depuis 2001", width/2, margin);
 }
 
 void addYearLabel(String s, float x) {
   pushMatrix();
   translate(x, height-margin/2);
   rotate(-PI/4);
-  textSize(12);
+  textSize(13);
   text(s, 0, 0 );
   popMatrix();
 }
@@ -155,7 +165,7 @@ void addAxLegend( int l, String legend, float xposText) {
   yaxe = height - margin - yaxe;
 
   strokeWeight(1);
-  stroke(180);
+  stroke(230);
 
   for (int xpos = margin; xpos < width-margin; xpos+=13) {
     line(xpos, yaxe, xpos+8, yaxe);

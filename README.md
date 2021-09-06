@@ -1,6 +1,6 @@
 # Évolution des dépôts dans l'archive ouverte HAL
 
-![evol des dépôts depuis 2001](graph_all_years/hal_depot_cumules.png)
+![evol des dépôts depuis 2001](graph_all_years/hal_depot_all_years.png)
 
 ![depot par mois](graph_3_years/hal_depot_3_annees_2019_2021.png)
 

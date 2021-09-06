@@ -1,12 +1,13 @@
 ArrayList<Month> months = new ArrayList<Month>();
 
+PFont font;
 Table data; 
 IntList values = new IntList();
 String[] monthname = {"janv", "fév", "mars", "avril", "mai", "juin", "juillet", "août", "sept", "oct", "nov", "déc"};
 int margin, maxRectSize, txtLegendColor;
 
 void setup() {
-  size(800, 700);
+  size(900, 800);
   background(255);
   strokeCap(SQUARE);
 
@@ -53,6 +54,8 @@ void setup() {
 
 void draw() {
   noLoop();
+  font = loadFont("NotoSans-Regular-24.vlw");
+  textFont(font);
   color fileColor = color(#1f618d);
   color noticeColor = color(#f1c40f);
   textAlign(CENTER, UP);
@@ -63,13 +66,13 @@ void draw() {
   int nbOfYear = 3 ;
 
   // add legend
-  addAxLegend(10000, "10k", width/5.5);
-  addAxLegend(20000, "20k", width/3.75 );
-  addAxLegend(30000, "30k", width/2.8 );
-  addAxLegend(40000, "40k", width/2.31 );
+  addAxLegend(10000, "10k", width/5.6);
+  addAxLegend(20000, "20k", width/3.85 );
+  addAxLegend(30000, "30k", width/2.95 );
+  addAxLegend(40000, "40k", width/2.37 );
 
-  smallAxe(100000, "100k", width/2.31, 60);
-  smallAxe(150000, "150k", width/1.95, 30);
+  smallAxe(100000, "100k", width/2.37, 60);
+  smallAxe(150000, "150k", width/2.05, 30);
 
   addGlobalLegend(fileColor, noticeColor);
 
@@ -77,7 +80,7 @@ void draw() {
     Month m = months.get(i);
 
     float xpos = map(i, 0, months.size()-1, margin, width-margin);
-    int distBetweenRect = 12;
+    int distBetweenRect = 16;
 
     // month name
     textSize(13);
@@ -93,7 +96,7 @@ void draw() {
       float changeXpos = map(year, 0, nbOfYear-1, -distBetweenRect, distBetweenRect);
       float alpha = map(year, 0, nbOfYear-1, 50, 255);
 
-      strokeWeight(10);
+      strokeWeight(14);
       stroke(fileColor, alpha);
       line(xpos + changeXpos, height-margin, xpos+changeXpos, height-margin-yfile);
 
@@ -120,7 +123,7 @@ void addAxLegend( int l, String legend, float xposText) {
   float yaxe = map(l, 0, values.max(), 0, maxRectSize);
   yaxe = height - margin - yaxe;
   strokeWeight(1);
-  stroke(180);
+  stroke(220);
   for (int xpos = margin; xpos < width-margin; xpos+=13) {
     line(xpos, yaxe, xpos+8, yaxe);
   }
@@ -130,22 +133,21 @@ void addAxLegend( int l, String legend, float xposText) {
 }
 
 
-
-
 void addGlobalLegend(color fileColor, color noticeColor) {
   float xlegend = 3.5*width/5.0;
-  float ylegend = height/10;
+  float ylegend = height/5;
   noStroke();
+  textSize(14);
 
   fill(noticeColor);
   rect(xlegend, ylegend, 20, 20);
   fill(txtLegendColor);
-  text("dépôt sans texte intégral", xlegend + 100, ylegend+15);
+  text("dépôt sans texte intégral", xlegend + 115, ylegend+15);
 
   fill(fileColor);
   rect(xlegend, ylegend+25, 20, 20);
   fill(txtLegendColor);
-  text("dépôt avec texte intégral", xlegend + 100, ylegend+40);
+  text("dépôt avec texte intégral", xlegend + 115, ylegend+40);
 
   ylegend += 130;
   xlegend += 0 ; 
@@ -168,7 +170,7 @@ void addGlobalLegend(color fileColor, color noticeColor) {
     popMatrix();
   }
   
-  textSize(20);
+  textSize(25);
   fill(0);
-  text("HAL : nombre de dépôts effectués par mois sur les 3 dernières années", width/2, margin/2);
+  text("Comparaison par mois des dépôts HAL \neffectués les trois précédentes années", width/2, margin/2);
 }

@@ -19,7 +19,7 @@ def reqHal(year, month):
         }
 
 data = {}
-for year in range(2001, 2021) : 
+for year in range(2001, 2022) : 
         for month in range(1,13) : 
                 result = reqHal(str(year), str(month))
                 data[ f"{year}-{month}" ] = [result["notice"], result["file"]]
@@ -28,4 +28,4 @@ for year in range(2001, 2021) :
 
 df = pd.DataFrame.from_dict(data, orient='index')
 df.index.name = "year-month"
-df.to_csv("evol_depot_cumule.csv", header=[ "notice", "file"])
+df.to_csv("depot_all_years.csv", header=[ "notice", "file"])
