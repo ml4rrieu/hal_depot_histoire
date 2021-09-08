@@ -12,15 +12,15 @@
 
 2018 mars : versement des thèses de Univ. Lorraine
 
-2018 mai : mise en place de Droit2Hal [univ-droit.fr _archive_](https://web.archive.org/web/20210905201740/https://univ-droit.fr/projets/33312-droit2hal)
+2019 juillet/aout : Droit2Hal [univ-droit.fr _archive_](https://web.archive.org/web/20210905201740/https://univ-droit.fr/projets/33312-droit2hal)
 
-2019 fev. : versement des rapports HCERES 
+2019 fev. : versement des rapports Hcéres
 
-2020 mai/juin : versement de Prodinra et Irstea
+2020 mai/juin : versement de Prodinra/Irstea
 
 2020 nov. : compte rendu annuel d’activité des chercheurs (CRAC)
 
-2021 juin : casuhalathon [casuhal2021.sciencesconf.org/](https://casuhal2021.sciencesconf.org/resource/page/id/8) 
+2021 juin : Casuhalathon [casuhal2021.sciencesconf.org/](https://casuhal2021.sciencesconf.org/resource/page/id/8) 
 
 
 <br /><br />
